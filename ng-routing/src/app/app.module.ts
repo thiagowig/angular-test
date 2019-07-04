@@ -1,33 +1,24 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
-import { MoviesListComponent } from './components/movies-list/movies-list.component';
 import { CharactersListComponent } from './components/characters-list/characters-list.component';
-import { MovieComponent } from './components/movie/movie.component';
 import { CharacterComponent } from './components/character/character.component';
+import { PageNotFoundComponent } from './components/page-not-found.component';
+import { MoviesModule } from './modules/movies/movies.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MoviesListComponent,
     CharactersListComponent,
-    MovieComponent,
-    CharacterComponent
+    CharacterComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot([
-      {
-        path: 'movies',
-        component: MoviesListComponent
-      },
-      {
-        path: 'characters',
-        component: CharactersListComponent
-      }
-    ])
+    MoviesModule,
+    AppRoutingModule    
   ],
   providers: [],
   bootstrap: [AppComponent]
