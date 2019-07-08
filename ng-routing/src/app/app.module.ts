@@ -7,6 +7,7 @@ import { CharactersListComponent } from './components/characters-list/characters
 import { CharacterComponent } from './components/character/character.component';
 import { PageNotFoundComponent } from './components/page-not-found.component';
 import { MoviesModule } from './modules/movies/movies.module';
+import { MyMaterialModule } from './modules/my-material/my-material.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { MoviesModule } from './modules/movies/movies.module';
   imports: [
     BrowserModule,
     MoviesModule,
-    AppRoutingModule    
+    AppRoutingModule,
+    MyMaterialModule    
   ],
   providers: [],
   bootstrap: [AppComponent]
